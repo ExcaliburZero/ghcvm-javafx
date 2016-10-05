@@ -13,7 +13,7 @@ start stage = do
  circle <- newCircle 40 40 30
  root <- newGroup
  scene <- newScene root 400 300
- _ <- (root <.> getChildren)
+ _ <- root <.> getChildren >- addChild circle
  stage <.> (do setTitle "My JavaFX Application"
                setScene scene
                showStage)

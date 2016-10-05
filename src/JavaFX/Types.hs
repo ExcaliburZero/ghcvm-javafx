@@ -1,4 +1,4 @@
-{-# LANGUAGE MagicHash, MultiParamTypeClasses #-}
+{-# LANGUAGE MagicHash, MultiParamTypeClasses, TypeFamilies #-}
 module JavaFX.Types where
 
 data {-# CLASS "javafx.application.Application" #-} Application
@@ -24,6 +24,12 @@ data {-# CLASS "javafx.scene.Node" #-} Node
 
 data {-# CLASS "javafx.scene.shape.Shape" #-} Shape
   = Shape (Object# Shape)
+
+data {-# CLASS "javafx.scene.control.TextField" #-} TextField
+  = TextField (Object# TextField)
+
+data {-# CLASS "javafx.scene.control.StackPane" #-} StackPane
+  = StackPane (Object# StackPane)
 
 data {-# CLASS "javafx.collections.ObservableList" #-} ObservableList
   = ObservableList (Object# ObservableList)
@@ -60,12 +66,16 @@ instance Class Shape where
   obj = Shape
   unobj (Shape o) = o
 
+instance Class TextField where
+  obj = TextField
+  unobj (TextField o) = o
+
 instance Class ObservableList where
   obj = ObservableList
   unobj (ObservableList o) = o
 
-instance Extends Group Parent
-instance Extends Parent Node
-instance Extends Shape Node
-instance Extends Circle Shape
-instance Extends Node Object
+type instance Super Group = Parent
+type instance Super Parent = Node
+type instance Super Shape = Node
+type instance Super Circle = Shape
+type instance Super Node = Object
