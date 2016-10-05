@@ -13,4 +13,4 @@ $ cabalvm run
 ```
 
 # Contact Us
-If you face any trouble with this project, or you'd like to take this project further, please contact us.
+If you face any trouble with this project, or you'd like to take this project further, please join us on (Gitter)(https://gitter.im/rahulmutt/ghcvm).
