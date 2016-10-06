@@ -1,6 +1,6 @@
 # JavaFX in GHCVM
 
-This is an example application that demonstrates Java integration in GHCVM
+This is an example application that demonstrates Java integration in GHCVM. For now, it just opens a blank screen and draws a black circle.
 
 # Prerequisites
 - JDK 8
@@ -16,4 +16,4 @@ $ cabalvm run
 ```
 
 # Contact Us
-If you face any trouble with this project, or you'd like to take this project further, please join us on (Gitter)(https://gitter.im/rahulmutt/ghcvm).
+If you face any trouble with this project, or you'd like to take this project further, please join us on [Gitter](https://gitter.im/rahulmutt/ghcvm).
