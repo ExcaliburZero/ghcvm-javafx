@@ -1,6 +1,7 @@
 {-# LANGUAGE MagicHash #-}
 module CalculatorApp where
 
+import Java
 import JavaFX.Types
 import JavaFX.Methods
 
