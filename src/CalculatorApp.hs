@@ -11,10 +11,11 @@ data {-# CLASS "org.ghcvm.CalculatorApp extends javafx.application.Application" 
 
 start :: Stage -> Java CalculatorApp ()
 start stage = do
- circle <- newCircle 40 40 30
+ button <- newButton
  root <- newGroup
  scene <- newScene root 400 300
- _ <- root <.> getChildren >- addChild circle
+ _ <- button <.> setText "Hello"
+ _ <- root <.> getChildren >- addChild button
  stage <.> (do setTitle "My JavaFX Application"
                setScene scene
                showStage)

@@ -17,6 +17,13 @@ foreign import java unsafe "@new"
 newTextField :: String -> Java c TextField
 newTextField = newTextField' . mkJString
 
+foreign import java unsafe "@new" newButton :: Java c Button
+
+foreign import java unsafe "setText" setText' :: JString -> Java Button ()
+
+setText  :: String -> Java Button ()
+setText = setText' . mkJString
+
 foreign import java unsafe "@new" newGroup :: Java c Group
 
 foreign import java unsafe "javafx.Utils.newGroupGen"

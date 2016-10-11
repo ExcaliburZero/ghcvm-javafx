@@ -4,6 +4,9 @@ module JavaFX.Types where
 data {-# CLASS "javafx.application.Application" #-} Application
   = Application (Object# Application)
 
+data {-# CLASS "javafx.scene.control.Button" #-} Button
+  = Button (Object# Button)
+
 data {-# CLASS "javafx.scene.Group" #-} Group
   = Group (Object# Group)
 
@@ -37,6 +40,10 @@ data {-# CLASS "javafx.collections.ObservableList" #-} ObservableList
 instance Class Application where
   obj = Application
   unobj (Application o) = o
+
+instance Class Button where
+  obj = Button
+  unobj (Button o) = o
 
 instance Class Group where
   obj = Group
@@ -77,5 +84,6 @@ instance Class ObservableList where
 type instance Super Group = Parent
 type instance Super Parent = Node
 type instance Super Shape = Node
+type instance Super Button = Object
 type instance Super Circle = Shape
 type instance Super Node = Object
